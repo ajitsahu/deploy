@@ -1,0 +1,40 @@
+config:
+  credentials_id: sshUserAcct
+
+remote_groups:
+  r_group_1:
+    - name: node01
+      host: ajitsahu4c.mylabserver.com
+    - name: node02
+      host: localhost
+  r_group_2:
+    - name: node03
+      host: node03.abc.net
+
+command_groups:
+  c_group_1:
+    - commands:
+        - 'ls -lrt'
+        - 'whoami'
+    - scripts:
+        - 'test.sh'
+  c_group_2:
+    - gets:
+        - from: 'test.sh'
+          to: 'test_new.sh'
+    - puts:
+        - from: 'test.sh'
+          to: '.'
+    - removes:
+        - 'test.sh'
+
+steps:
+  deploy:
+    - remote_groups:
+        - r_group_1
+      command_groups:
+        - c_group_1
+    - remote_groups:
+        - r_group_2
+      command_groups:
+        - c_group_2
