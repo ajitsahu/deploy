@@ -1,5 +1,5 @@
 config:
-  credentials_id: sshUserAcct
+  credentials_id: clouduser
 
 remote_groups:
   r_group_1:
