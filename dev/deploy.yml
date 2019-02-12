@@ -2,7 +2,7 @@ config:
   credentials_id: clouduser
 
 remote_groups:
-  r_group_1:
+  servergroup:
     - name: node01
       host: node01.abc.net
     - name: node02
@@ -31,7 +31,7 @@ command_groups:
 steps:
   deploy:
     - remote_groups:
-        - r_group_1
+        - servergroup
       command_groups:
         - c_group_1
     - remote_groups:
