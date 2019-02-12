@@ -3,6 +3,7 @@ config:
 
 remote_groups:
   r_group_1:
+  - name: node01
       host: ajitsahu4c.mylabserver.com
 
 command_groups:
