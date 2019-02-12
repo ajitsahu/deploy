@@ -9,7 +9,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'ls -lrt'
+        - 'ls -l /var/lib/jenkins'
         - 'whoami'
 steps:
   deploy:
