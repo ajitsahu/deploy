@@ -11,6 +11,8 @@ command_groups:
     - commands:
         - 'uname -a'
         - 'whoami'
+        - 'date'
+        - 'ls -lrt /usr/local/'
 steps:
   deploy:
     - remote_groups:
