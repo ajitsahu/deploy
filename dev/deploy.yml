@@ -8,9 +8,6 @@ remote_groups:
 
 command_groups:
   c_group_1:
-    - commands:
-        - 'ls -l /var/lib/jenkins'
-        - 'hostname -f'
     - scripts:
         - 'test.sh'
 steps:
