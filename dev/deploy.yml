@@ -9,7 +9,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - scripts:
-        - 'test.sh'
+        - 'bash -x test.sh'
 steps:
   deploy:
     - remote_groups:
