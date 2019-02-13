@@ -2,5 +2,5 @@
 
 node {
     checkout scm
-    ('dev/deploy.yml');
+    sshDeploy('dev/deploy.yml');
 }
