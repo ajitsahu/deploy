@@ -11,6 +11,8 @@ command_groups:
     - commands:
         - 'ls -l /var/lib/jenkins'
         - 'hostname -f'
+    - scripts:
+        - 'test.sh'
 steps:
   deploy:
     - remote_groups:
