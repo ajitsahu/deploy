@@ -9,7 +9,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'hostname -f'
+        - 'whoami'
 steps:
   deploy:
     - remote_groups:
