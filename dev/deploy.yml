@@ -9,6 +9,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
+        - 'uname -a'
         - 'whoami'
 steps:
   deploy:
