@@ -13,6 +13,7 @@ command_groups:
         - 'whoami'
         - 'date'
         - 'ls -lrt /usr/local/'
+        - 'df -h'
 steps:
   deploy:
     - remote_groups:
