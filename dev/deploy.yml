@@ -8,8 +8,8 @@ remote_groups:
 
 command_groups:
   c_group_1:
-    - scripts:
-        - './test.sh'
+    - commands:
+        - 'hostname -f'
 steps:
   deploy:
     - remote_groups:
