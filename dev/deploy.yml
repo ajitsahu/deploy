@@ -10,10 +10,11 @@ command_groups:
   c_group_1:
     - commands:
         - 'uname -a'
-        - 'whoami'
         - 'date'
         - 'ls -lrt /usr/local/'
         - 'df -h'
+        - 'cd /usr/local/src'
+        - 'pwd'
 steps:
   deploy:
     - remote_groups:
