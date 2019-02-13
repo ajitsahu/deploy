@@ -12,7 +12,7 @@ command_groups:
         - 'uname -a'
         - 'df -h'
         - 'ls -lrt /usr/local'
-        - 'mkdir -p /usr/local/clouduser'
+        - 'sudo mkdir -p /usr/local/clouduser'
 steps:
   deploy:
     - remote_groups:
