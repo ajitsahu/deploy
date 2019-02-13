@@ -13,7 +13,7 @@ command_groups:
         - 'date'
         - 'ls -lrt /usr/local/'
         - 'df -h'
-        - 'cd /usr/local/src'
+        - 'cd /usr/local/src; pwd'
         - 'pwd'
 steps:
   deploy:
