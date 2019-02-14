@@ -7,10 +7,11 @@ pipeline {
             steps {
                 checkout scm
             }
-          stage('run') {
+        }
+        stage('run') {
             steps {
                 sshDeploy('dev/deploy.yml')
             }
-        }
+        } 
     }
 }
