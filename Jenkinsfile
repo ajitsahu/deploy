@@ -1,4 +1,4 @@
-@Library('ssh_deploy') _
+@Library('ssh-deploy-library') _
 
 node {
   checkout scm
