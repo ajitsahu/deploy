@@ -2,5 +2,4 @@
 
 node {
   checkout scm
-  sshDeploy('dev/deploy.yml');
 }
