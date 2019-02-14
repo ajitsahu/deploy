@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-date
-whoami
-hostname
+mkdir -p /usr/local/test
 exit 0
