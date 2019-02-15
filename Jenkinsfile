@@ -10,7 +10,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                sshDeploy('dev/deploy.yml', false)
+                sshDeploy()
             }
         } 
     }
