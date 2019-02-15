@@ -10,7 +10,8 @@ pipeline {
         }
         stage('run') {
             steps {
-                sshDeploy()
+                booleanParam(name: "dryRun", defaultValue: false, description: "")
+                sshDeploy('dev/deploy.yml', ${params.dryRun})
             }
         } 
     }
