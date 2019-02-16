@@ -12,7 +12,8 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'ls -l'
+        - 'mkdir -p /usr/local/clouduser'
+        - 'chown cloud_user /usr/local/clouduser'
     - scripts:
         - 'test.sh'
 steps:
