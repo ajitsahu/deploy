@@ -2,5 +2,6 @@
 
 node {
   checkout scm
-  sshDeploy(String dev/deploy.yml);
+  def yaml = readYaml file: 'deploy.yml'
+  sshDeploy(yaml);
 }
