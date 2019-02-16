@@ -12,7 +12,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'rmdir /usr/local/clouduser'
+        - 'mkdir -p /usr/local/clouduser'
 steps:
   deploy:
     - remote_groups:
