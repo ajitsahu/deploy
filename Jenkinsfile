@@ -4,7 +4,7 @@ pipeline {
     agent any
     
     parameters {
-        booleanParam(name: "dryRun", defaultValue: false, description: "")
+        booleanParam(name: "dryRun", defaultValue: true, description: "")
     }
     
     stages {
