@@ -5,7 +5,7 @@ pipeline {
     
     parameters {
         booleanParam(name: "dryRun", defaultValue: false, description: "")
-        booleanParam(name: "isSudo", defaultValue: false, description: "")
+        booleanParam(name: "isSudo", defaultValue: true, description: "")
     }
     
     stages {
