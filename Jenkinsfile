@@ -2,5 +2,5 @@
 
 node {
   checkout scm
-  sshDeploy(String 'dev/deploy.yml');
+  sshDeploy(String dev/deploy.yml);
 }
