@@ -5,12 +5,14 @@ remote_groups:
   r_group_1:
     - name: node01
       host: ajitsahu4c.mylabserver.com
+  r_group_2:
     - name: node02
       host: ajitsahu3c.mylabserver.com
 
 command_groups:
   c_group_1:
     - commands:
+        - 'ls -l'
     - scripts:
         - 'test.sh'
 steps:
