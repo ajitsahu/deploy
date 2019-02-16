@@ -10,7 +10,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                def yaml = readYaml file: yamlName
+                sshDeploy('dev/deploy.yml', false)
             }
         } 
     }
