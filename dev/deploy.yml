@@ -12,9 +12,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'mkdir -p /usr/local/temp'
-    - scripts:
-        - 'test.sh'
+        - 'rmdir /usr/local/clouduser'
 steps:
   deploy:
     - remote_groups:
