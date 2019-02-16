@@ -15,7 +15,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                sshDeploy('dev/deploy.yml', params.dryRun)
+                sshDeploy('dev/deploy.yml', params.dryRun);
             }
         } 
     }
