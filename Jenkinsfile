@@ -1,8 +1,17 @@
 @Library('ssh_deploy') _
 
-node {
-  checkout scm
-  def yaml = readYaml file: 'dev/deploy.yml' {
-     sshDeploy(yaml);
-  }
+pipeline {
+    agent any
+    stages {
+        stage('checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('run') {
+            steps {
+                sshDeploy('dev/deploy.yml')
+            }
+        } 
+    }
 }
