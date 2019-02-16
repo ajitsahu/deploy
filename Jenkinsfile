@@ -2,6 +2,6 @@
 
 node {
   checkout scm
-  def yaml = readYaml file: 'deploy.yml'
+  def yaml = readYaml file: 'dev/deploy.yml'
   sshDeploy(yaml);
 }
