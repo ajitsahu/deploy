@@ -2,11 +2,6 @@
 
 pipeline {
     agent any
-    
-    parameters {
-        booleanParam(name: "dryRun", defaultValue: true, description: "")
-    }
-    
     stages {
         stage('checkout') {
             steps {
@@ -15,7 +10,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                sshDeploy('dev/deploy.yml', params.dryRun);
+                sshDeploy('dev/deploy.yml');
             }
         } 
     }
