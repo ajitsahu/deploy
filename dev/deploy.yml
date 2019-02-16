@@ -11,10 +11,6 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'uname -a'
-        - 'df -h'
-        - 'ls -lrt /usr/local'
-        - 'mkdir -p /usr/local/clouduser'
     - scripts:
         - 'test.sh'
 steps:
