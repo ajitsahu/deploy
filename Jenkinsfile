@@ -1,17 +1,16 @@
-@Library('ssh_deploy') _
+def remote = [:]
+remote.name = "node1"
+remote.host = "ajitsahu4c.mylabserver.com"
+remote.allowAnyHosts = true
 
-pipeline {
-    agent any
-    stages {
-        stage('checkout') {
-            steps {
-                checkout scm
-            }
+node {
+    withCredentials([usernamePassword(credentialsId: 'clouduser', passwordVariable: 'password', usernameVariable: 'userName')]) {
+        remote.user = userName
+        remote.password = password
+
+        stage("SSH Steps Rocks!") {
+            sshCommand remote: remote, command: 'ls -l /usr/local/'
+            sshScript remote: remote, script: 'test.sh'
         }
-        stage('run') {
-            steps {
-                sshDeploy('dev/deploy.yml', false);
-            }
-        } 
     }
 }
