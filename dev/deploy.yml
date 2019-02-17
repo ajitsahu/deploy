@@ -11,8 +11,11 @@ remote_groups:
 
 command_groups:
   c_group_1:
-    - scripts:
-        - 'test.sh'
+    - puts:
+        - from: 'test.sh'
+          to: '/home/cloud_user/'
+    - commands:
+        - './home/cloud_user/test.sh'
 steps:
   deploy:
     - remote_groups:
