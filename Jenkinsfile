@@ -7,7 +7,9 @@ node {
     withCredentials([usernamePassword(credentialsId: 'clouduser', passwordVariable: 'password', usernameVariable: 'userName')]) {
         remote.user = userName
         remote.password = password
-
+        stage("Checkout") {
+            git 'git@github.com:ajitsahu/deploy.git'
+        }
         stage("SSH Steps Rocks!") {
             sshCommand remote: remote, command: 'ls -l /usr/local/'
             sshScript remote: remote, script: 'test.sh'
