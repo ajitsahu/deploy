@@ -13,7 +13,7 @@ command_groups:
   c_group_1:
     - commands: 
         - 'mkdir -p /usr/local/script'
-        - 'chmod 777 /usr/local/script'
+        - 'chmod 755 /usr/local/script'
     - puts:
         - from: 'test.sh'
           to: '/usr/local/script'
