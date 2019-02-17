@@ -1,20 +1,22 @@
-def remote = [:]
-def isSudo = true
-remote.name = "node1"
-remote.host = "ajitsahu4c.mylabserver.com"
-remote.allowAnyHosts = true
-remote.executeSudo = true
+@Library('ssh_deploy') _
 
-node {
-    withCredentials([usernamePassword(credentialsId: 'clouduser', passwordVariable: 'password', usernameVariable: 'userName')]) {
-        remote.user = userName
-        remote.password = password
-        stage("Checkout") {
-            git 'git@github.com:ajitsahu/deploy.git'
+pipeline {
+    agent any
+    
+    parameters {
+        booleanParam(name: "dryRun", defaultValue: false, description: "")
+    }
+    
+    stages {
+        stage('checkout') {
+            steps {
+                checkout scm
+            }
         }
-        stage("SSH Steps Rocks!") {
-            sshCommand remote: remote, command: 'mkdir -p /usr/local/temp1', sudo: isSudo
-            sshScript remote: remote, script: 'test.sh', sudo: isSudo
-        }
+        stage('run') {
+            steps {
+                sshDeploy('dev/deploy.yml', params.dryRun);
+            }
+        } 
     }
 }
