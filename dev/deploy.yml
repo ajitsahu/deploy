@@ -16,7 +16,7 @@ command_groups:
         - 'chmod 755 /usr/local/script'
     - puts:
         - from: 'test.sh'
-          to: '/usr/local/script'
+        - to: '/usr/local/script'
     - commands:
         - 'sh /usr/local/script/test.sh'
 steps:
