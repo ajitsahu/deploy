@@ -13,7 +13,7 @@ command_groups:
   c_group_1:
     - puts:
         - from: 'test.sh'
-          to: '.'
+          to: '/home/cloud_user/'
     - commands:
         - 'sh /home/cloud_user/test.sh'
 steps:
