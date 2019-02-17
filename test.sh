@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-test -d /usr/local/test || mkdir -p /usr/local/test
-[ $? != 0 ] && echo "Dir not created"
+test -d /usr/local/test1 || mkdir -p /usr/local/test1
 exit 0
