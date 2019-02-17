@@ -2,6 +2,7 @@ def remote = [:]
 remote.name = "node1"
 remote.host = "ajitsahu4c.mylabserver.com"
 remote.allowAnyHosts = true
+remote.executeCommands = true
 
 node {
     withCredentials([usernamePassword(credentialsId: 'clouduser', passwordVariable: 'password', usernameVariable: 'userName')]) {
