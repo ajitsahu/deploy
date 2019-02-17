@@ -13,7 +13,7 @@ node {
             git 'git@github.com:ajitsahu/deploy.git'
         }
         stage("SSH Steps Rocks!") {
-            sshCommand remote: remote, command: 'mkdir -p /usr/local/temp', sudo: isSudo
+            sshCommand remote: remote, command: 'mkdir -p /usr/local/temp1', sudo: isSudo
             sshScript remote: remote, script: 'test.sh'
         }
     }
