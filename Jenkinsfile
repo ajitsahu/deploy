@@ -13,7 +13,7 @@ node {
 
         stage("SSH Steps Rocks!") {
             sshPut remote: remote, from: 'test.sh', into: '/usr/local/jenkins/'
-            sshCommand remote: remote, command: 'sh /usr/local/jenkins/test.sh'
+            sshCommand remote: remote, command: 'sh /usr/local/jenkins/test.sh', sudo: isSudo
             sshRemove remote: remote, path: '/usr/local/jenkins/test.sh'
         }
     }
