@@ -1,5 +1,6 @@
 config:
   credentials_id: clouduser
+  isSudo: true
 
 remote_groups:
   r_group_1:
@@ -11,11 +12,8 @@ remote_groups:
 
 command_groups:
   c_group_1:
-    - commands: 
-        - 'mkdir -p /usr/local/script'
-        - 'chmod 755 /usr/local/script'
-        - 'ls -lrt'
-        - 'pwd'
+    - commands:
+        - 'cat /usr/local/src/file1'
     - puts:
         - from: 'test.sh'
           to: '/usr/local/script'
