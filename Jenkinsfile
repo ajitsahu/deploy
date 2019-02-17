@@ -1,21 +1,22 @@
-def remote = [:]
-def isSudo = true
-remote.name = "node1"
-remote.host = "ajitsahu4c.mylabserver.com"
-remote.allowAnyHosts = true
+@Library('ssh_deploy') _
 
-node {
-    withCredentials([usernamePassword(credentialsId: 'clouduser', passwordVariable: 'password', usernameVariable: 'userName')]) {
-        remote.user = userName
-        remote.password = password
-        stage("checkout") {
-            git 'git@github.com:ajitsahu/deploy.git'
-        } 
-
-        stage("SSH Steps Rocks!") {
-            sshPut remote: remote, from: 'test.sh', into: '/usr/local/jenkins/'
-            sshCommand remote: remote, command: 'sh /usr/local/jenkins/test.sh', sudo: isSudo
-            sshRemove remote: remote, path: '/usr/local/jenkins/test.sh'
+pipeline {
+    agent any
+    
+    parameters {
+        booleanParam(name: "dryRun", defaultValue: false, description: "")
+    }
+    
+    stages {
+        stage('checkout') {
+            steps {
+                checkout scm
+            }
         }
+        stage('run') {
+            steps {
+                sshDeploy('dev/deploy.yml', params.dryRun);
+            }
+        } 
     }
 }
