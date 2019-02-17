@@ -11,11 +11,14 @@ remote_groups:
 
 command_groups:
   c_group_1:
+    - commands: 
+        - 'mkdir -p /usr/local/script'
+        - 'chmod 777 /usr/local/script'
     - puts:
         - from: 'test.sh'
-          to: '/home/cloud_user/test.sh'
+          to: '/usr/local/script'
     - commands:
-        - 'sh /home/cloud_user/test.sh'
+        - 'sh /usr/local/script/test.sh'
 steps:
   deploy:
     - remote_groups:
