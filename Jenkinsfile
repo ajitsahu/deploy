@@ -14,7 +14,7 @@ node {
         }
         stage("SSH Steps Rocks!") {
             sshCommand remote: remote, command: 'mkdir -p /usr/local/temp1', sudo: isSudo
-            sshScript remote: remote, script: 'test.sh'
+            sshScript remote: remote, script: 'test.sh', sudo: isSudo
         }
     }
 }
