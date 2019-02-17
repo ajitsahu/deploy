@@ -12,7 +12,6 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'cat /usr/local/src/file1'
         - 'sh test.sh'
 steps:
   deploy:
