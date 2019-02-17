@@ -15,7 +15,7 @@ command_groups:
         - from: 'test.sh'
           to: '/home/cloud_user/'
     - commands:
-        - './home/cloud_user/test.sh'
+        - 'sh /home/cloud_user/test.sh'
 steps:
   deploy:
     - remote_groups:
