@@ -1,4 +1,5 @@
 def remote = [:]
+def isSudo = true
 remote.name = "node1"
 remote.host = "ajitsahu4c.mylabserver.com"
 remote.allowAnyHosts = true
@@ -12,7 +13,7 @@ node {
             git 'git@github.com:ajitsahu/deploy.git'
         }
         stage("SSH Steps Rocks!") {
-            sshCommand remote: remote, command: 'ls -l /usr/local/'
+            sshCommand remote: remote, command: 'mkdir -p /usr/local/temp', sudo: isSudo
             sshScript remote: remote, script: 'test.sh'
         }
     }
