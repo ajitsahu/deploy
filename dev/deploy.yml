@@ -1,6 +1,5 @@
 config:
   credentials_id: clouduser
-  isSudo: true
 
 remote_groups:
   r_group_1:
@@ -14,11 +13,7 @@ command_groups:
   c_group_1:
     - commands:
         - 'cat /usr/local/src/file1'
-    - puts:
-        - from: 'test.sh'
-          to: '/usr/local/script'
-    - commands:
-        - 'sh /usr/local/script/test.sh'
+        - 'sh test.sh'
 steps:
   deploy:
     - remote_groups:
