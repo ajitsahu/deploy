@@ -14,9 +14,11 @@ command_groups:
     - commands: 
         - 'mkdir -p /usr/local/script'
         - 'chmod 755 /usr/local/script'
+        - 'ls -lrt'
+        - 'pwd'
     - puts:
         - from: 'test.sh'
-        - to: '/usr/local/script'
+          to: '/usr/local/script'
     - commands:
         - 'sh /usr/local/script/test.sh'
 steps:
