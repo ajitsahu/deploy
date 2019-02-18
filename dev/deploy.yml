@@ -17,10 +17,8 @@ command_groups:
         - 'ls -l /usr/local/script/'
   c_group_2:
     - puts:
-        - from: 'test.sh'
-          to: '.'
-    - removes:
-        - 'test.sh'
+        - from: 'test.sh, file1'
+          to: '/usr/local/script/'
 steps:
   deploy:
     - remote_groups:
