@@ -14,6 +14,7 @@ command_groups:
     - commands:
         - 'mkdir -p /usr/local/script'
         - 'chmod 755 /usr/local/script'
+        - 'ls -l /usr/local/script/'
 steps:
   deploy:
     - remote_groups:
