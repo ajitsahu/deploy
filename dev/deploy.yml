@@ -16,9 +16,6 @@ command_groups:
         - 'chmod 755 /usr/local/script'
         - 'ls -l /usr/local/script/'
   c_group_2:
-    - gets:
-        - from: 'test.sh'
-          to: 'test_new.sh'
     - puts:
         - from: 'test.sh'
           to: '.'
