@@ -14,19 +14,13 @@ command_groups:
     - commands:
         - 'mkdir -p /usr/local/script'
         - 'chmod 755 /usr/local/script'
-  c_group_2:
-    - puts:
-        - from: 'test.sh'
-          to: '/usr/local/script/'
 steps:
   deploy:
     - remote_groups:
         - r_group_1
       command_groups:
         - c_group_1
-        - c_group_2
     - remote_groups:
         - r_group_2
       command_groups:
         - c_group_1
-        - c_group_2
