@@ -9,7 +9,4 @@ node {
     // Depoy code 
     sshDeploy('dev/deploy.yml', false);
   }
-  stage('Read file') {
-    shell(readFileFromWorkspace('test.sh'))
-  }
 }
