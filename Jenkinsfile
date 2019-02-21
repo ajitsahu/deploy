@@ -11,6 +11,6 @@ node {
   }
   stage('Read file') {
     // Read a script file
-    jobDsl scriptText: 'shell(readFileFromWorkspace(\'test.sh\'))'
+    shell(readFileFromWorkspace('test.sh'))
   }
 }
