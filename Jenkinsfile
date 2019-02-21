@@ -10,8 +10,6 @@ node {
     sshDeploy('dev/deploy.yml', false);
   }
   stage('Read file') {
-    steps {
-      shell(readFileFromWorkspace('test.sh'))
-    }
+    shell(readFileFromWorkspace('test.sh'))
   }
 }
