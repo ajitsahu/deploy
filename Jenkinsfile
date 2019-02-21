@@ -10,7 +10,10 @@ node {
     sshDeploy('dev/deploy.yml', false);
   }
   stage('Read file') {
-    // Read a script file
-    shell(readFileFromWorkspace('test.sh'))
+    job('example') {
+      steps {
+        shell(readFileFromWorkspace('file1'))
+      }
+    }
   }
 }
