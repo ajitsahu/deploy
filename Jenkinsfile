@@ -9,4 +9,8 @@ node {
     // Depoy code 
     sshDeploy('dev/deploy.yml', false);
   }
+  stage('Read file') {
+    // Read a script file
+    jobDsl scriptText: 'shell(readFileFromWorkspace(\'test.sh\'))'
+  }
 }
