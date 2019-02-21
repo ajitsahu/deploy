@@ -12,7 +12,7 @@ node {
   stage('Read file') {
     job('example') {
       steps {
-        shell(readFileFromWorkspace('file1'))
+        shell(readFileFromWorkspace('test.sh'))
       }
     }
   }
