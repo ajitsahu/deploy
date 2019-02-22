@@ -9,7 +9,6 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
-        - 'sh test.sh'
 steps:
   deploy:
     - remote_groups:
