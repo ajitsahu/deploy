@@ -9,6 +9,15 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
+    - gets:
+        - from: 'test.sh'
+          to: 'test_new.sh'
+    - puts:
+        - from: 'test.sh'
+          to: '.'
+    - removes:
+        - 'test.sh'
+  
 steps:
   deploy:
     - remote_groups:
