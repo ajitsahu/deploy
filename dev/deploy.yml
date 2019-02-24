@@ -9,6 +9,8 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
+  c_group_2:
+    - puts:
         - from: 'test.sh'
           to: '/usr/local/jenkins/'
 steps:
@@ -17,3 +19,4 @@ steps:
         - r_group_1
       command_groups:
         - c_group_1
+        - c_group_2
