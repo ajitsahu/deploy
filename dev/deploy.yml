@@ -12,7 +12,7 @@ command_groups:
         - 'cat test.sh'
   c_group_2:
     - puts:
-        - from: 'test.sh'
+        - from: '/var/lib/jenkins/workspace/demo/test.sh'
           to: '/usr/local/jenkins/'
 steps:
   deploy:
