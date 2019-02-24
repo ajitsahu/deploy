@@ -17,7 +17,6 @@ command_groups:
           to: '.'
     - removes:
         - 'test.sh'
-  
 steps:
   deploy:
     - remote_groups:
