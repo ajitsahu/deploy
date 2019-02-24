@@ -9,7 +9,6 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
-    - puts:
         - from: 'test.sh'
           to: '/usr/local/jenkins/'
 steps:
