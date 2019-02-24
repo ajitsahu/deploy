@@ -11,7 +11,7 @@ command_groups:
         - 'ls -lrt'
     - puts:
         - from: 'test.sh'
-          to: '.'
+          to: '/usr/local/jenkins/'
 steps:
   deploy:
     - remote_groups:
