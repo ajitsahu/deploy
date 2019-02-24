@@ -11,7 +11,7 @@ command_groups:
         - 'ls -lrt /var/lib/jenkins/workspace/demo/'
   c_group_2:
     - puts:
-        - from: '/var/lib/jenkins/workspace/demo/test.sh'
+        - from: 'test.sh'
           to: '/usr/local/jenkins/'
 steps:
   deploy:
