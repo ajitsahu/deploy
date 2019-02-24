@@ -9,7 +9,6 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
-        - 'cat test.sh'
   c_group_2:
     - puts:
         - from: '/var/lib/jenkins/workspace/demo/test.sh'
