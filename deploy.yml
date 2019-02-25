@@ -9,6 +9,7 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
+        - 'sh /usr/local/jenkins/test.sh'
   c_group_2:
     - gets:
         - from: 'test.sh'
