@@ -5,6 +5,8 @@ remote_groups:
   r_group_1:
     - name: node01
       host: ajitsahu4c.mylabserver.com
+    - name: node02
+      host: ajitsahu3c.mylabserver.com
 command_groups:
   c_group_1:
     - commands:
