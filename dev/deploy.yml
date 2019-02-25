@@ -8,7 +8,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'ls -lrt /var/lib/jenkins/workspace/demo/'
+        - 'ls -lrt'
   c_group_2:
     - puts:
         - from: 'test.sh'
