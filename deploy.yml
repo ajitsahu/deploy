@@ -12,7 +12,7 @@ command_groups:
   c_group_2:
     - puts:
         - from: 'test.sh'
-          to: '.'
+          to: '/usr/local/jenkins/'
 steps:
   deploy:
     - remote_groups:
