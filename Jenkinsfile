@@ -5,6 +5,6 @@ node {
     git 'git@github.com:ajitsahu/deploy.git'
   }
   stage("Deploy") {
-    sshDeploy('dev/deploy.yml', false);
+    sshDeploy('deploy.yml', false);
   }
 }
