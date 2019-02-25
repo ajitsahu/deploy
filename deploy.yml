@@ -12,10 +12,10 @@ command_groups:
   c_group_2:
     - gets:
         - from: 'test.sh'
-          to: 'test1.sh'
+          into: 'test1.sh'
     - puts:
         - from: 'test.sh'
-          to: '/usr/local/jenkins/'
+          into: '/usr/local/jenkins/'
 steps:
   deploy:
     - remote_groups:
