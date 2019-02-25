@@ -1,6 +1,10 @@
 @Library('ssh_deploy') _
 
 node {
-  checkout scm
-  sshDeploy('dev/deploy.yml', false);
+  stage("checkout") {
+    git 'git@github.com:ajitsahu/deploy.git'
+  }
+  stage("Deploy") {
+    sshDeploy('dev/deploy.yml', false);
+  }
 }
