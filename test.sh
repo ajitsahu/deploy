@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
-test -d /usr/local/test1 || mkdir -p /usr/local/test1
-[ $? -ne 0 ] && echo "NG file"
-cat /etc/sudoers
+#!/bin/bash
+ls -ltr
+uname -a
+date
+whoami
 exit 0
