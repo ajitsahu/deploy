@@ -11,9 +11,6 @@ command_groups:
         - 'ls -lrt'
         - 'sh /usr/local/jenkins/test.sh'
   c_group_2:
-    - gets:
-        - from: 'test.sh'
-          into: 'test1.sh'
     - puts:
         - from: 'test.sh'
           into: '/usr/local/jenkins/'
