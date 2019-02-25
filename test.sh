@@ -1,8 +1,6 @@
 #!/bin/bash
 mkdir -p /usr/local/newDir
 [ $? -ne 0 ] && echo "NG dir" && exit 10
-ls -ltr
+chown newuser /usr/local/newDir
 uname -a
-date
-whoami
 exit 0
