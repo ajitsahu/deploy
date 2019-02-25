@@ -22,5 +22,5 @@ steps:
     - remote_groups:
         - r_group_1
       command_groups:
-        - c_group_1
         - c_group_2
+        - c_group_1
