@@ -10,6 +10,9 @@ command_groups:
     - commands:
         - 'ls -lrt'
   c_group_2:
+    - gets:
+        - from: 'test.sh'
+          to: 'test1.sh'
     - puts:
         - from: 'test.sh'
           to: '/usr/local/jenkins/'
