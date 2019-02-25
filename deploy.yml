@@ -1,0 +1,22 @@
+config:
+  credentials_id: clouduser
+
+remote_groups:
+  r_group_1:
+    - name: node01
+      host: ajitsahu4c.mylabserver.com
+command_groups:
+  c_group_1:
+    - commands:
+        - 'ls -lrt'
+  c_group_2:
+    - puts:
+        - from: 'test.sh'
+          to: '.'
+steps:
+  deploy:
+    - remote_groups:
+        - r_group_1
+      command_groups:
+        - c_group_1
+        - c_group_2
