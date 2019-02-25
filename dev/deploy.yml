@@ -9,6 +9,7 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
+        - 'sh test.sh'
   c_group_2:
     - puts:
         - from: 'test.sh'
