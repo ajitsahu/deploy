@@ -8,28 +8,28 @@ remote_groups:
     - name: node02
       host: ajitsahu2c.mylabserver.com
   r_group_2:
-    - name: node01
+    - name: node03
       host: ajitsahu3c.mylabserver.com
-    - name: node02
+    - name: node04
       host: ajitsahu4c.mylabserver.com
 command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
-        - 'sh test.sh'
+        - 'mkdir -p /usr/local/jenkins'
   c_group_2:
     - puts:
         - from: 'test.sh'
-          into: '.'
+          into: '/usr/local/jenkins'
 steps:
   deploy:
     - remote_groups:
         - r_group_1
       command_groups:
-        - c_group_2
         - c_group_1
+        - c_group_2
     - remote_groups:
         - r_group_2
       command_groups:
-        - c_group_2
         - c_group_1
+        - c_group_2
