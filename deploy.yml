@@ -4,22 +4,32 @@ config:
 remote_groups:
   r_group_1:
     - name: node01
-      host: ajitsahu4c.mylabserver.com
+      host: ajitsahu1c.mylabserver.com
     - name: node02
+      host: ajitsahu2c.mylabserver.com
+  r_group_2:
+    - name: node01
       host: ajitsahu3c.mylabserver.com
+    - name: node02
+      host: ajitsahu4c.mylabserver.com
 command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
-        - 'sh /usr/local/jenkins/test.sh'
+        - 'sh test.sh'
   c_group_2:
     - puts:
         - from: 'test.sh'
-          into: '/usr/local/jenkins/'
+          into: '.'
 steps:
   deploy:
     - remote_groups:
         - r_group_1
+      command_groups:
+        - c_group_2
+        - c_group_1
+    - remote_groups:
+        - r_group_2
       command_groups:
         - c_group_2
         - c_group_1
