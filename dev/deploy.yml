@@ -15,11 +15,7 @@ remote_groups:
 command_groups:
   c_group_1:
     - commands:
-        - 'ls -lrt'
-        - 'uname -a'
-        - 'hostnamectl'
-        - 'test -d /usr/local/jenkins || mkdir -p /usr/local/jenkins'
-        - 'chown cloud_user /usr/local/jenkins'
+        - 'sh /usr/local/jenkins/test.sh'
   c_group_2:
     - puts:
         - from: 'test.sh'
@@ -29,10 +25,10 @@ steps:
     - remote_groups:
         - r_group_1
       command_groups:
-        - c_group_1
         - c_group_2
+        - c_group_1
     - remote_groups:
         - r_group_2
       command_groups:
-        - c_group_1
         - c_group_2
+        - c_group_1
