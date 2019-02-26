@@ -16,6 +16,8 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
+        - 'uname -a'
+        - 'hostnamectl'
         - 'test -d /usr/local/jenkins || mkdir -p /usr/local/jenkins'
         - 'chown cloud_user /usr/local/jenkins'
   c_group_2:
