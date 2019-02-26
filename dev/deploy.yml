@@ -16,7 +16,7 @@ command_groups:
   c_group_1:
     - commands:
         - 'ls -lrt'
-        - 'mkdir -p /usr/local/jenkins'
+        - 'test -d /usr/local/jenkins || mkdir -p /usr/local/jenkins'
         - 'chown cloud_user /usr/local/jenkins'
   c_group_2:
     - puts:
