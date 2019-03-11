@@ -25,3 +25,4 @@ steps:
       command_groups:
         - c_group_1
         - c_group_2
+        - c_group_3
