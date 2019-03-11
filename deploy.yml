@@ -5,13 +5,6 @@ remote_groups:
   r_group_1:
     - name: node01
       host: ajitsahu1c.mylabserver.com
-    - name: node02
-      host: ajitsahu2c.mylabserver.com
-  r_group_2:
-    - name: node03
-      host: ajitsahu3c.mylabserver.com
-    - name: node04
-      host: ajitsahu4c.mylabserver.com
 command_groups:
   c_group_1:
     - commands:
@@ -26,11 +19,6 @@ steps:
   deploy:
     - remote_groups:
         - r_group_1
-      command_groups:
-        - c_group_1
-        - c_group_2
-    - remote_groups:
-        - r_group_2
       command_groups:
         - c_group_1
         - c_group_2
